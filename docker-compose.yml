@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  app:
+    image: splitterapp:latest
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "4000:3000"

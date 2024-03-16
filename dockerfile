@@ -1,3 +1,6 @@
+# Specify the platform for the base image
+FROM --platform=linux/amd64 ubuntu:latest
+
 # Use the official Node.js 14 image as a parent image
 FROM node:14-alpine as build
 
